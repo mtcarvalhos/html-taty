@@ -1,0 +1,733 @@
+body{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 22px;
+    line-height: 1.2em;
+    letter-spacing: 1px;
+    color: #3A4014;
+}
+
+h1{
+    font-size: 28px;
+    font-weight: bold;
+    color: #4E323E;
+}
+h4{
+    font-size: 16px;
+    font-style: italic;
+    color: #000;
+}
+
+.mt-container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.mt-to-up{
+    width: 60px;
+    height: 39px;
+    border: 0px solid black;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    display:none;
+}
+
+
+/*responsive*/
+@media(min-width: 768px) {
+
+    #mt-proj-grid {
+        margin: 0 auto;
+        padding: 0;
+        width: 90%;
+        display: table;
+        border: 0px solid black;
+    }
+
+    .mt-proj-grid-item {
+        padding: 0;
+        margin: 5px;
+        border: 1px solid red;
+        float: left;
+        width: 32.105%;
+        position: relative;
+        overflow: hidden;
+        display: table;
+    }
+
+
+    .mt-proj-grid-item img {
+
+            max-width: 100%;
+            max-height: 100%;
+            -moz-transition: all 0.3s;
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+            
+    }
+
+    .mt-mask-item {
+        
+        position: relative;
+        margin: 2%;
+        overflow: hidden;
+        border: 1px solid black;
+    }
+}
+
+
+
+.mt-proj-grid-item img:hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+
+}
+
+
+/*Header*/
+
+
+.mt-main-top-arrow{
+    width: 60px;
+    height: 60px;
+    border: 0px solid black;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -30px;
+    
+}
+
+/*SLIDER*/
+#mt-slider {
+    height: 100%;
+    width: 100%;
+    overflow: visible;
+    position: absolute;
+    border: 0px solid #eaeaea;
+}
+
+#mt-mask {
+    overflow: hidden;
+    height: 100%;
+}
+
+#mt-slider ul{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+#mt-slider li {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    list-style: none;
+}
+
+#mt-slider ul li img {
+    width: inherit;
+     -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/*Animation*/
+#mt-slider li.mt-first-anim {
+    animation: cycle 40s linear infinite;
+}
+
+#mt-slider li.mt-second-anim {
+    animation: cycletwo 40s linear infinite;
+}
+
+#mt-slider li.mt-third-anim {
+    animation: cyclethree 40s linear infinite;
+}
+
+#mt-slider li.mt-fourth-anim {
+    animation: cyclefour 40s linear infinite;
+}
+
+#mt-slider li.mt-fifth-anim {
+    animation: cyclefive 40s linear infinite;
+}
+
+@keyframes cycle {
+    0% {
+        top: 0px;
+    }
+    /* When you start the slide, the first image is already visible */
+    4% {
+        top: 0px;
+    }
+    /* Original Position */
+    16% {
+        top: 0px;
+        opacity: 1;
+        z-index: 0;
+    }
+    /* From 4% to 16 % = for 3 seconds the image is visible */
+    20% {
+        top: 325px;
+        opacity: 0;
+        z-index: 0;
+    }
+    /* From 16% to 20% = for 1 second exit image */
+    21% {
+        top: -325px;
+        opacity: 0;
+        z-index: -1;
+    }
+    /* Return to Original Position */
+    92% {
+        top: -325px;
+        opacity: 0;
+        z-index: 0;
+    }
+
+    96% {
+        top: -325px;
+        opacity: 0;
+    }
+    /* From 96% to 100% = for 1 second enter image*/
+    100% {
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes cycletwo {
+    0% {
+        top: -325px;
+        opacity: 0;
+    }
+    /* Original Position */
+    16% {
+        top: -325px;
+        opacity: 0;
+    }
+    /* Starts moving after 16% to this position */
+    20% {
+        top: 0px;
+        opacity: 1;
+    }
+
+    24% {
+        top: 0px;
+        opacity: 1;
+    }
+    /* From 20% to 24% = for 1 second enter image*/
+    36% {
+        top: 0px;
+        opacity: 1;
+        z-index: 0;
+    }
+    /* From 24% to 36 % = for 3 seconds the image is visible */
+    40% {
+        top: 325px;
+        opacity: 0;
+        z-index: 0;
+    }
+    /* From 36% to 40% = for 1 second exit image */
+    41% {
+        top: -325px;
+        opacity: 0;
+        z-index: -1;
+    }
+    /* Return to Original Position */
+    100% {
+        top: -325px;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@keyframes cyclethree {
+    0% {
+        top: -325px;
+        opacity: 0;
+    }
+
+    36% {
+        top: -325px;
+        opacity: 0;
+    }
+
+    40% {
+        top: 0px;
+        opacity: 1;
+    }
+
+    44% {
+        top: 0px;
+        opacity: 1;
+    }
+
+    56% {
+        top: 0px;
+        opacity: 1;
+    }
+
+    60% {
+        top: 325px;
+        opacity: 0;
+        z-index: 0;
+    }
+
+    61% {
+        top: -325px;
+        opacity: 0;
+        z-index: -1;
+    }
+
+    100% {
+        top: -325px;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@keyframes cyclefour {
+    0% {
+        top: -325px;
+        opacity: 0;
+    }
+
+    56% {
+        top: -325px;
+        opacity: 0;
+    }
+
+    60% {
+        top: 0px;
+        opacity: 1;
+    }
+
+    64% {
+        top: 0px;
+        opacity: 1;
+    }
+
+    76% {
+        top: 0px;
+        opacity: 1;
+        z-index: 0;
+    }
+
+    80% {
+        top: 325px;
+        opacity: 0;
+        z-index: 0;
+    }
+
+    81% {
+        top: -325px;
+        opacity: 0;
+        z-index: -1;
+    }
+
+    100% {
+        top: -325px;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@keyframes cyclefive {
+    0% {
+        top: -325px;
+        opacity: 0;
+    }
+
+    76% {
+        top: -325px;
+        opacity: 0;
+    }
+
+    80% {
+        top: 0px;
+        opacity: 1;
+    }
+
+    84% {
+        top: 0px;
+        opacity: 1;
+    }
+
+    96% {
+        top: 0px;
+        opacity: 1;
+        z-index: 0;
+    }
+
+    100% {
+        top: 325px;
+        opacity: 0;
+        z-index: 0;
+    }
+}
+
+.mt-progress-bar {
+    position: relative;
+    top: -5px;
+    width: 100%;
+    height: 5px;
+    background: #ccc;
+    animation: fullexpand 40s ease-in infinite;
+}
+
+
+@keyframes fullexpand {
+    /* In these keyframes, the progress-bar is stationary */
+    0%, 20%, 40%, 60%, 80%, 100% {
+        width: 0%;
+        opacity: 0;
+    }
+    /* In these keyframes, the progress-bar starts to come alive */
+    4%, 24%, 44%, 64%, 84% {
+        width: 0%;
+        opacity: 0.3;
+    }
+    /* In these keyframes, the progress-bar moves forward for 3 seconds */
+    16%, 36%, 56%, 76%, 96% {
+        width: 100%;
+        opacity: 0.7;
+    }
+    /* In these keyframes, the progress-bar has finished his path */
+    17%, 37%, 57%, 77%, 97% {
+        width: 100%;
+        opacity: 0.3;
+    }
+    /* In these keyframes, the progress-bar will disappear and then resume the cycle */
+    18%, 38%, 58%, 78%, 98% {
+        width: 100%;
+        opacity: 0;
+    }
+}
+
+@keyframes tooltip {
+    /* In these keyframes, the progress-bar is stationary */
+    0%, 20%, 40%, 60%, 80%, 100% {
+        left: -320px;
+        opacity: 0;
+    }
+    /* In these keyframes, the progress-bar starts to come alive */
+    4%, 24%, 44%, 64%, 84% {
+        left: -320px;
+        opacity: 0.3;
+    }
+    /* In these keyframes, the progress-bar moves forward for 3 seconds */
+    16%, 36%, 56%, 76%, 96% {
+        left: 0;
+        opacity: 0.9;
+    }
+    /* In these keyframes, the progress-bar has finished his path */
+    17%, 37%, 57%, 77%, 97% {
+        left: 0;
+        opacity: 1;
+    }
+    /* In these keyframes, the progress-bar will disappear and then resume the cycle */
+    18%, 38%, 58%, 78%, 98% {
+        left: 0;
+        opacity: 0;
+    }
+}
+
+
+#mt-slider .mt-tooltip {
+    background: rgba(0,0,0,0.7);
+    width: 300px;
+    height: 60px;
+    position: relative;
+    bottom: 190px;
+    left: -320px;
+    animation: tooltip 40s ease-out infinite;
+}
+
+#mt-slider .mt-tooltip h1 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 60px;
+    padding: 0 0 0 10px;
+}
+
+
+#mt-info{
+    z-index: 101;
+    color: white;
+    position: absolute;
+    font-size: 100px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
+
+
+/*MENU*/
+#mt-main-menu {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: block;
+    text-align: right;
+    padding: 20px 30px 0 0;
+    border: 0px wheat solid
+}
+
+#mt-main-menu li{
+       display: inline;
+     background: rgba(255, 255, 255, .3)
+    }
+
+#mt-main-menu li a{
+    color: #0A0A0A;
+     text-transform: uppercase;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+/*projetos*/
+
+#mt-main-top{
+    height: 100vh;
+   
+}
+
+.slider-top img {
+    height: 100vh;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.mt-top{
+    display: table;
+    margin: 40px auto 0 auto;
+}
+
+#mt-main-projects{
+    border: 0px wheat solid;
+   
+    padding: 0 0 150px 0;
+}
+
+#mt-main-projects h1{
+    padding: 10px 0 10px 0;
+    margin: 0px 0 10px 90px;
+    width: 80%;
+    border-bottom: 3px solid #4E323E;
+    font-size: 35px;
+}
+
+
+
+.mt-proj-more{
+    display: block;
+    text-align: center;
+    padding: 40px 0 0 0;
+}
+
+
+/*about*/
+#mt-main-about{
+    height: 100vh;
+}
+
+#mt-main-about h1{
+    padding: 40px 0 10px 0;
+    margin: 0px 0 50px 90px;
+    width: 80%;
+    border-bottom: 3px solid #4E323E;
+    font-size: 35px;
+    text-align: right;
+}
+
+
+.mt-about-body{
+    margin: 0px 0 0px 0;
+    padding: 0 10px 0px 10px;
+}
+
+
+.mt-about-body-social{
+    width: 100%;
+    display: block;
+    text-align: left;
+    margin: 50px 0 150px 0;
+    padding-left: 10px;
+
+}
+
+.mt-about-body-social li{
+    display: inline;
+}
+
+
+/*Contact*/
+#mt-main-contact{
+    height: 100vh;
+}
+
+#mt-main-contact h1{
+    padding: 40px 0 10px 0;
+    margin: 0px 0 10px 90px;
+    width: 80%;
+    border-bottom: 3px solid #4E323E;
+    font-size: 35px;
+    text-align: left;
+}
+
+#mt-main-contact h4{
+    text-align: center;
+}
+
+form {
+  text-align: center;
+  padding: 20px 0;
+}
+
+
+label{
+  display: block;
+  padding-top:30px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+label .mt-contato-form-label-text{
+  -moz-transform: translateY(-34px);
+  -ms-transform: translateY(-34px);
+  -webkit-transform: translateY(-34px);
+  transform: translateY(-34px);
+  transition: all 0.3s;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #3A4014;
+  cursor: text;
+
+}
+
+label input{
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #4E323E;
+  color: #C09A73;
+  font-size: 34px;
+  letter-spacing: -1px;
+  outline: 0;
+  padding: 5px 20px;
+  text-align: center;
+  transition: all 0.3s;
+  width: 400px;
+}
+
+label input:focus{
+   width: 500px;
+}
+
+label input:-webkit-autofill{
+         -webkit-box-shadow: 0 0 0 1000px white inset !important;
+}
+
+label input:focus + .mt-contato-form-label-text{
+  -moz-transform: translateY(-76px);
+  -ms-transform: translateY(-76px);
+  -webkit-transform: translateY(-76px);
+  transform: translateY(-76px);
+  font-size: 13px;
+}
+
+label input:valid + .mt-contato-form-label-text{
+  font-size: 13px;
+  -moz-transform: translateY(-76px);
+  -ms-transform: translateY(-76px);
+  -webkit-transform: translateY(-76px);
+  transform: translateY(-76px);
+}
+
+
+
+label textarea{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid #4E323E;
+    width: 400px;
+    height: 100px;
+    font-size: 22px;
+    letter-spacing: -1px;
+    color: #C09A73;
+    text-align: justify;
+    padding: 15px;
+    transition: all 0.3s;
+}
+
+label textarea:focus{
+   width: 500px;
+   box-shadow: 0 0 0 0;
+   outline: 0;
+}
+
+
+label textarea:focus + .mt-contato-form-label-text{
+  -moz-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  -webkit-transform: translateY(10px);
+  transform: translateY(10px);
+  font-size: 13px;
+}
+
+label textarea:valid + .mt-contato-form-label-text{
+  -moz-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  -webkit-transform: translateY(10px);
+  transform: translateY(10px);
+  font-size: 13px;
+}
+
+/*footer*/
+footer{
+    height: 100px;
+    background: #3A4014
+}
+
+
+
+
+.form-contact-btn{
+    margin: 30px;
+}
+
+.mt-btn{
+    padding: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.mt-btn-primary{
+    background-color: transparent;
+    border: 2px solid #724C18;
+    color: #724C18;
+    transition: all 1s;
+}
+
+.mt-btn-primary:hover{
+    background-color: #724C18;
+    color: #fff;
+}
+
+
+.mt-fix-float{
+    clear: both;
+}
+
+
